@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bank of United Nations of Uganda</title>
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <a class="inline-block ml-8 mt-4 text-2xl" href="./index.html">
+                Home</a
+            >
+            <h1 class="text-center font-medium text-green-500 py-16 text-5xl">
+                Status of <span class="text-blue-500">Your Account </span>
+            </h1>
+        </header>
+
+        <main>
+            <section>
+                <div
+                    class="
+                        grid
+                        md:grid-cols-3
+                        sm:grid-cols-2
+                        grid-cols-1
+                        gap-4
+                        w-3/4
+                        mx-auto
+                    "
+                >
+                    <div class="deposit rounded-md bg-blue-200 p-8">
+                        <h3 class="text-white text-3xl">Deposit</h3>
+                        <h4 class="text-white text-2xl mt-2">
+                            $<span id="total-deposit">00</span>
+                        </h4>
+                    </div>
+                    <div class="withdraw rounded-md bg-green-200 p-8">
+                        <h3 class="text-white text-3xl">Withdraw</h3>
+                        <h4 class="text-white text-2xl mt-2">
+                            $<span id="total-withdraw">00</span>
+                        </h4>
+                    </div>
+                    <div class="balance rounded-md bg-yellow-200 p-8">
+                        <h3 class="text-white text-3xl">Balance</h3>
+                        <h4 class="text-white text-2xl mt-2">
+                            $<span id="total-balance">1000</span>
+                        </h4>
+                    </div>
+                </div>
+            </section>
+
+            <audio src="./media/money.mp3" id="money-sound"></audio>
+
+            <section>
+                <p id="warning" class="py-4 text-red-300 text-center hidden">
+                    You Don't Have Enough Money to WithDraw!
+                </p>
+                <div class="transaction mt-8">
+                    <div
+                        class="
+                            grid grid-cols-1
+                            md:grid-cols-2
+                            sm:grid-cols-1
+                            p-8
+                            bg-gray-300
+                            gap-4
+                            w-full
+                            lg:w-2/4
+                            md:w-3/4
+                            sm:w-3/4
+                            mx-auto
+                        "
+                    >
+                        <div class="deposit-input">
+                            <input
+                                id="deposit-amount"
+                                type="text"
+                                class="py-2 px-4 mt-4 block mx-auto"
+                                placeholder="$ amount to deposit"
+                            />
+                            <button
+                                id="deposit-btn"
+                                class="
+                                    py-2
+                                    px-4
+                                    mt-4
+                                    mx-auto
+                                    block
+                                    bg-white
+                                    hover:text-green-500
+                                "
+                            >
+                                Deposit
+                            </button>
+                        </div>
+                        <div class="withdraw-input">
+                            <input
+                                id="withdraw-amount"
+                                type="text"
+                                class="py-2 px-4 mt-4 block mx-auto"
+                                placeholder="$ amount to Withdraw"
+                            />
+
+                            <button
+                                id="withdraw-btn"
+                                class="
+                                    py-2
+                                    px-4
+                                    mt-4
+                                    mx-auto
+                                    block
+                                    bg-white
+                                    hover:text-green-500
+                                "
+                            >
+                                withdraw
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
